@@ -18,7 +18,7 @@ print("Ο τύπος δεδομένων των στηλών του dataset εί�
 data.dtypes
 
 #5.Υπάρχουν στήλες με τιμές που λείπουν; Κι αν ναι ποιες; (Ποιες στήλες έχουν missing values /NaN)
-columns_with_nan = data.columns[nan_values.any()].tolist()
+columns_with_nan = data.columns[data.isna().any()].tolist()
 print("Οι στήλες του dataset στις οποίες λείπουν τιμές (missing values/NaN) είναι:", columns_with_nan)
 
 #6.Ποιος ο συνολικός αριθμών των εγγραφών; (χωρίς τα headers)
