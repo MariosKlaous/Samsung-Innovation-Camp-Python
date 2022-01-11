@@ -1,16 +1,24 @@
 import pandas as pd
+#Ερωτήματα που αφορούν την περιγραφή του dataset
+
 #1.Διαβάστε το αρχείο data.csv
 data = pd.read_csv('C:/Users/mario/Documents/Personal/Project/Samsung Innovation Campus/Εργασία Python/data.csv', sep=',', header='infer')
+print(data)
+
 #2.Εκτυπώστε τις τελευταίες 5 εγγραφές του dataframe
+print("Οι τελευταίες 5 εγγραφές του dataframe είναι:")
 print(data.iloc[541904:])
+
 #3.Πόσες (αριθμό) και ποιες (ονόματα) στήλες (columns) έχει το dataset που φορτώσατε;
-print(data.columns)
-len(data.columns)
+print("Τα ονόματα των στηλών του dataset είναι:", list(data.columns))
+print("Και ο αριθμός τους είναι:", len(data.columns))
+
 #4.Ως τι τύπο δεδομένων αναγνωρίζει η βιβλιοθήκη pandas τις στήλες του dataset;
-print(type(data.columns))
-columns= list(data.columns) #ΧΡΕΙΑΖΕΤΑΙ Η ΜΕΤΑΤΡΟΠΗ ΣΕ ΛΙΣΤΑ;;;
-print(type(columns))
+print("Ο τύπος δεδομένων των στηλών του dataset είναι:")
+data.dtypes
+
 #5.Υπάρχουν στήλες με τιμές που λείπουν; Κι αν ναι ποιες; (Ποιες στήλες έχουν missing values /NaN)
 data.isnull().any()
+
 #6.Ποιος ο συνολικός αριθμών των εγγραφών; (χωρίς τα headers)
-len(data)
+print("Ο συνολικός αριθμός των εγγραφών (χωρίς τα headers) είναι:",len(data))
