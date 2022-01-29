@@ -2,6 +2,56 @@ from tkinter import BOTH
 import pandas as pd
 data = pd.read_csv('C:/Users/mario/Documents/Personal/Project/Samsung Innovation Campus/Εργασία Python/data.csv', sep=',', header='infer')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #1 - Ποιός ο αριθμός των μοναδικών/διαφορετικών πελατών 
 print("Number of unique customers: ", end='')
 print(data['CustomerID'].nunique())
